@@ -1,0 +1,16 @@
+.idea
+
+# CLIENT
+
+/client/.idea
+/client/node_modules
+
+# POSTS
+
+/posts/.idea
+/posts/node_modules
+
+# COMMENTS
+
+/comments/.idea
+/comments/node_modules
