@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
+import CommentForm from "../../Forms/CommentForm/CommentForm.jsx";
 
 const PostList = () => {
     const [posts, setPosts] = useState({});
@@ -17,10 +18,11 @@ const PostList = () => {
     const renderedPosts = Object.values(posts)
 
     return (
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-3 gap-4">
             {renderedPosts.map(post=>(
                 <div className="border p-3 rounded shadow-lg" key={post.id}>
                     <h3 className="text-xl font-bold mb-6">{post.title}</h3>
+                    <CommentForm postId={post.id} />
                 </div>
             ))}
         </div>
