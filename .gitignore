@@ -14,3 +14,8 @@
 
 /comments/.idea
 /comments/node_modules
+
+# CLIENT
+
+/client/.idea
+/client/node_modules
