@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
 import CommentForm from "../../Forms/CommentForm/CommentForm.jsx";
+import CommentList from "../CommentList/CommentList.jsx";
 
 const PostList = () => {
     const [posts, setPosts] = useState({});
@@ -23,6 +24,8 @@ const PostList = () => {
                 <div className="border p-3 rounded shadow-lg" key={post.id}>
                     <h3 className="text-xl font-bold mb-6">{post.title}</h3>
                     <CommentForm postId={post.id} />
+                    <div className="divider w-full border-t my-4"/>
+                    <CommentList postId={post.id} />
                 </div>
             ))}
         </div>
