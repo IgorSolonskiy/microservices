@@ -18,7 +18,7 @@ app.get('/posts/:id/comments', (req, res) => {
 app.post('/posts/:id/comments', async (req, res) => {
     const id = randomBytes(4).toString('hex');
     const {content} = req.body;
-    const comment = {id, content};
+    const comment = {id, content, status: 'pending'};
 
     const comments = commentsByPostId[req.params.id] || []
 
@@ -37,7 +37,7 @@ app.post('/posts/:id/comments', async (req, res) => {
     res.status(201).json(comments);
 })
 
-app.post('/events',(req,res)=>{
+app.post('/events', (req, res) => {
     console.log('Received event', req.body.type)
 
     res.send({});

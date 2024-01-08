@@ -24,3 +24,8 @@
 
 /query/.idea
 /query/node_modules
+
+# MODERATION
+
+/moderation/.idea
+/moderation/node_modules
