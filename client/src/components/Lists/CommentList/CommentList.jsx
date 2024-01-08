@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+
 import {getCommentContentByStatus} from "@/helpers/comment/index.js";
 
 const CommentList = ({comments}) => {

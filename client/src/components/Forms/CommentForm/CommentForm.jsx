@@ -1,6 +1,6 @@
 import axios from "axios";
-import {useCallback, useId, useState} from "react";
 import PropTypes from "prop-types";
+import {useCallback, useId, useState} from "react";
 
 export const CommentForm = ({postId}) => {
     const [content, setContent] = useState('');
@@ -18,8 +18,7 @@ export const CommentForm = ({postId}) => {
 
     const handleChangeTitle = useCallback(e => setContent(e.target.value), []);
 
-    return (
-        <form onSubmit={handleSubmit} className="flex flex-col mt-6 justify-start items-start">
+    return (<form onSubmit={handleSubmit} className="flex flex-col mt-6 justify-start items-start">
             <label
                 htmlFor={id}
                 className="mb-1 cursor-pointer">
@@ -36,8 +35,7 @@ export const CommentForm = ({postId}) => {
                 className="px-4 py-2 text-white rounded mt-3 text-sm max-w-xs bg-sky-500/50 hover:shadow-lg hover:bg-sky-500/100">
                 Create
             </button>
-        </form>
-    )
+        </form>)
 }
 
 CommentForm.propTypes = {
