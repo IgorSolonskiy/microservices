@@ -1,5 +1,5 @@
-import PostForm from "./components/Forms/PostForm/PostForm.jsx";
-import PostList from "./components/Lists/PostList/PostList.jsx";
+import PostForm from "@/components/Forms/PostForm/PostForm.jsx";
+import PostList from "@/components/Lists/PostList/PostList.jsx";
 
 export default function App() {
     return (
